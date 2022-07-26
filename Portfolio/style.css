@@ -23,7 +23,17 @@ header
     width: 100%;
     background-color: white;
     z-index:3;
+    animation:nav-ani 0.75s ease-in-out;
 }
+
+@keyframes nav-ani 
+{
+    0%
+    {
+        transform:translateY(-50%);
+    }
+}
+
 
 .logo h1
 {
@@ -58,6 +68,38 @@ nav a:hover
     min-height:100vh;
     background-color:rgb(156, 236, 173);
 }
+.my-txt .txt-1
+{
+    animation:text-ani .75s linear;
+}
+
+.my-txt .txt-2
+{
+   animation:text-ani .75s linear;
+}
+
+@keyframes text-ani 
+{
+    0%
+    {
+        transform:translateX(-50%);
+    }
+}
+
+.my-image
+{
+    animation:img-ani 0.75s ease-in-out;
+}
+@keyframes img-ani
+{
+    0%
+    {
+        transform:translateX(150%);
+    }
+}
+
+
+
 
 /* .my-txt
 {
@@ -76,13 +118,7 @@ nav a:hover
     color:brown;
 }
 
-.my-txt .txt-2
-{
-    padding-top:10px;
-    padding-left:20%;
-    font-size:20px;
-    font-weight: 300;
-}
+
 
 .line
 {
@@ -562,7 +598,19 @@ color:transparent;
     justify-content: center;
     flex-wrap:wrap;
 }
+.reveal
+{
+    position:relative;
+    transform:translateY(150px);
+    opacity:0;
+    transition:all 2s ease;
+}
 
+.reveal.active
+{
+    transform:translateY(0px);
+    opacity:1;
+}
 .partners *
 {
     padding:0px 20px;
