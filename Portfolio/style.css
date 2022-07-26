@@ -12,16 +12,11 @@ body
 }
 
 
-header
+ header
 {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:11px 5px;
     border-bottom:1px solid rgba(117, 110, 110, 0.829);
     position:fixed;
     width: 100%;
-    background-color: white;
     z-index:3;
     animation:nav-ani 0.75s ease-in-out;
 }
@@ -34,7 +29,19 @@ header
     }
 }
 
+.nav-link
+        {
+            margin-left:10px !important;
+            padding-right:17px !important;
+        }
 
+.nav-link:hover
+{
+    color:aqua;
+    border-bottom:5px solid orange;
+}        
+
+/* 
 .logo h1
 {
     padding-left:10px;
@@ -54,10 +61,11 @@ nav a:hover
     color:orange;
 }
 
+*/
 .s-media span,.s-media i
 {
     padding:0px 10px;
-}
+} 
 
 
 .main-page
@@ -171,10 +179,6 @@ color:transparent;
     width:500px;
 } 
 
-.years-txt
-{
-    width:50%;
-}
 .nice
 {
     color:grey;
@@ -589,6 +593,42 @@ color:transparent;
     margin-top:6% !important;
     color:grey;
     font-weight:400;
+}
+.p-1.reveal
+{
+    width:0px;
+    background-color: black !important;
+    transition: width 3s;
+}
+
+.p-2.reveal
+{
+    width:0px;
+    background-color: lightgreen  !important;
+    transition: width 3s;
+}
+
+.p-3.reveal
+{
+    width:0px;
+    background-color: orange  !important;
+    transition: width 3s;
+}
+
+.p-3.reveal.active
+{
+    width:80px;
+}
+
+
+.p-1.reveal.active
+{
+    width:80px;
+}
+
+.p-2.reveal.active
+{
+    width:80px;
 }
 
 .partners
