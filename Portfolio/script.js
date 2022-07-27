@@ -24,3 +24,26 @@ function reveal()
 
 
 }
+
+window.addEventListener("scroll",card);
+
+function card()
+{
+    var cards = document.querySelectorAll(".card");
+    for(var i=0;i<cards.length;i++)
+    {
+        var windowheight = window.innerHeight;
+        var cardtop = cards[i].getBoundingClientRect().top;
+        var cardpoint = 50;
+    }
+
+    if(cardtop < windowheight - cardpoint)
+    {
+        cards[i].classList.add("card-ani");
+    }
+
+    else
+    {
+        cards[i].classList.remove("card-ani");
+    }
+}

@@ -5,11 +5,16 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
-body
+ 
+html
 {
-    overflow-x:hidden;
+    overflow-x:hidden !important;
 }
+
+body section
+{
+    width: 100%;
+} 
 
 
  header
@@ -73,7 +78,7 @@ nav a:hover
     display:flex;
     align-items:center;
     justify-content:space-between;
-    min-height:100vh;
+    min-height:50vh;
     background-color:rgb(156, 236, 173);
 }
 .my-txt .txt-1
@@ -148,6 +153,19 @@ color:transparent;
     transform: rotate(45deg);
 } */
 
+
+@media screen and (min-width:890px) and (max-width:1299px)
+{
+  
+    .s-media 
+    {
+        margin-left:-10%;
+    }
+.s-media span,.s-media i
+{
+    padding:0px 1px;
+}   
+}
 .txt-3 a
 {
     text-decoration:none;
@@ -158,9 +176,8 @@ color:transparent;
 {
     background-color:antiquewhite;
     display:flex;
-    align-items:center;
+    align-items:flex-start;
     padding:10px;
-    height:100vh;  
 }
 
 .content-years
@@ -193,7 +210,6 @@ color:transparent;
 
 .para-years
 {
-    width:70%;
     margin-top:20px;
     text-align:justify;
     font-size: 15px;
@@ -599,6 +615,7 @@ color:transparent;
     width:0px;
     background-color: black !important;
     transition: width 3s;
+
 }
 
 .p-2.reveal
@@ -620,6 +637,21 @@ color:transparent;
     width:80px;
 }
 
+.card-ani{
+    animation:card-animation 2s linear;
+}
+
+@keyframes card-animation
+{
+    0%{
+        transform:translateX(-100%);
+    }
+
+    100%
+    {
+        transform:translateX(0%);
+    }
+}
 
 .p-1.reveal.active
 {
